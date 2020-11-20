@@ -7,3 +7,14 @@
       content: Welcome to Myserver, i am Blue
       dest: /var/www/html/index.html
     tags: [never,blue]
+
+  - name  : Add html content
+    copy  :
+      content : "This updated html"
+      dest: /var/www/html/index.html
+
+  - name  : restart service
+    service:
+      name  : httpd
+      state : restarted
+
