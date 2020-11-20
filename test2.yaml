@@ -1,6 +1,6 @@
 ---
 - name: create httml
-  hosts: all
+  hosts : all
   tasks:
   - name: Add html content
     copy:
