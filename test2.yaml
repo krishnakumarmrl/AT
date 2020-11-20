@@ -5,7 +5,7 @@
   - name  : Add html content
     copy  :
       content : "This updated html"
-      dest: /var/www/html/index.html
+      dest  : "/var/www/html/index.html"
       
   - name  : restart service
     service:
