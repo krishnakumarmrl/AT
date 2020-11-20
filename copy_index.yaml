@@ -1,15 +1,15 @@
 ---
-- name  : create httml
-  hosts : all
-  tasks :
-  - name  : Add html content
-    copy  :
-      content : "This updated html"
+- name : create httml
+  hosts: all
+  tasks:
+  - name : Add html content
+    copy :
+      content: "This updated html"
       dest: /var/www/html/index.html
       
-  - name  : restart service
+  - name: restart service
     service:
-      name  : httpd
-      state : restarted 
+      name: httpd
+      state: restarted 
 
 
