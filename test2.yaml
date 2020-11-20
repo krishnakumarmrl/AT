@@ -1,20 +1,15 @@
 ---
-- name: Copy the content to webserver
-  hosts: all
-  tasks:
-  - name: copy the Blue content to server
-    copy:
-      content: Welcome to Myserver, i am Blue
-      dest: /var/www/html/index.html
-    tags: [never,blue]
-
+- name  : create httml
+  hosts : all
+  tasks :
   - name  : Add html content
     copy  :
       content : "This updated html"
       dest: /var/www/html/index.html
-
+      
   - name  : restart service
     service:
       name  : httpd
-      state : restarted
+      state : restarted 
+
 
