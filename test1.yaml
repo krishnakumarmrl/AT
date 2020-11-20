@@ -1,0 +1,6 @@
+---
+- name : test
+  hosts : all
+  tasks:
+  - name : shell
+    shell : uname -n
