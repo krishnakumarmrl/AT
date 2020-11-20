@@ -1,6 +1,6 @@
 ---
 - name: Copy the content to webserver
-  hosts: dev
+  hosts: all
   tasks:
   - name: copy the Blue content to server
     copy:
