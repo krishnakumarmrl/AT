@@ -1,0 +1,9 @@
+---
+- name: Copy the content to webserver
+  hosts: dev
+  tasks:
+  - name: copy the Blue content to server
+    copy:
+      content: Welcome to Myserver, i am Blue
+      dest: /var/www/html/index.html
+    tags: [never,blue]
